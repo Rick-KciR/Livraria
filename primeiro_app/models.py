@@ -43,6 +43,8 @@ class Livro(models.Model):
 
     def __str__(self):
         return self.titulo
+        if len(self.descricao > 50):
+            return self.descricao[:50] + "..."
 
 
 class Cliente(models.Model):
