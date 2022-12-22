@@ -14,7 +14,7 @@
 
   {{ form.as_p }}
 
-    <button type="submit">Salvar</button>
+    <a href="{% url 'url_update' livro.id %}"><button type="submit">Salvar</button></a>
 
     {% if livro.id %}
         <a href="{% url 'url_delete' livro.id %}"><button type="submit">Excluir</button></a>
