@@ -43,5 +43,4 @@ def update(request, pk):
 def delete(request, pk):
     livro = Livro.objects.get(pk=pk)
     livro.delete()
-    print(livro)
     return redirect("url_listagem")

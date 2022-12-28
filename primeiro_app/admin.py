@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from primeiro_app.models import Autor, Livro, Categoria, Cliente, Endereco
+from primeiro_app.models import Autor, Livro, Categoria
 
 
 @admin.register(Autor)
@@ -17,12 +17,3 @@ class LivroAdmin(admin.ModelAdmin):
 class CategoriaAdmin(admin.ModelAdmin):
     ...
 
-
-@admin.register(Cliente)
-class ClienteAdmin(admin.ModelAdmin):
-    ...
-
-
-@admin.register(Endereco)
-class EnderecoAdmin(admin.ModelAdmin):
-    ...

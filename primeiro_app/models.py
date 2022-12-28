@@ -47,30 +47,5 @@ class Livro(models.Model):
             return self.descricao[:50] + "..."
 
 
-class Cliente(models.Model):
-    nome = models.CharField("Nome Completo", max_length=200)
-    cpf = models.CharField("Cpf", max_length=11)
-    email = models.EmailField("Email", blank=True, null=True)
-    celular = models.CharField("Celular", max_length=14)
 
-    class Meta:
-        verbose_name_plural = "Clientes"
-
-    def __str__(self):
-        return self.nome
-
-
-class Endereco(models.Model):
-    cliente = models.ManyToManyField(Cliente)
-    rua = models.CharField("Rua/Avenida", max_length=200)
-    numero = models.CharField("Número", max_length=5)
-    bairro = models.CharField("Bairro", max_length=200)
-    cidade = models.CharField("Cidade", max_length=200)
-    estado = models.CharField("Estado", max_length=200)
-
-    class Meta:
-        verbose_name_plural = "Endereços"
-
-    def __str__(self):
-        return self.cliente
 

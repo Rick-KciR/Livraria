@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+</head>
+<body>
+<h2>Log in</h2>
+
+{% block content %}
+<div class="row">
+    <dteiv class="col-md-4 offset-md-4"></dteiv>
+        <div class="card auth-card">
+            <div class="card-body"></div>
+                <h4 class="card-title text-center">Entrar</h4>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ next }}">
+
+                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                </form>
+        </div>
+</div>
+{% endblock %}
+
+</body>
+</html>
